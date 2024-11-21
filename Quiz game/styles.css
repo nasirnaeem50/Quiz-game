@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Changed to min-height for better responsiveness */
+    margin: 0;
+    padding: 20px; /* Added padding to avoid edge issues on small screens */
+    box-sizing: border-box; /* Ensures padding doesn't affect total width */
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%; /* Set to 100% to adapt to container size */
+    max-width: 400px; /* Added max-width for larger screens */
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 0 0 20px;
+}
+
+.input-field {
+    margin-bottom: 15px;
+    display: block;
+    width: 100%; /* Full width for inputs */
+    padding: 8px;
+    border: 1px solid #ccc; /* Added border for better visibility */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box;
+}
+
+.question {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Full width for buttons */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: default;
+}
+
+.hidden {
+    display: none;
+}
+
+#leaderboard {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.leaderboard-container {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+#leaderboard-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#leaderboard-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#leaderboard-list li:last-child {
+    border-bottom: none;
+}
+
+#score {
+    font-weight: bold;
+}
+
+#next-btn {
+    margin-top: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1, h2 {
+        font-size: 1.5em; /* Adjusted font size for smaller screens */
+    }
+
+    .input-field {
+        padding: 10px; /* Slightly larger padding for input fields */
+    }
+
+    button {
+        padding: 12px; /* Larger button for easier tapping */
+    }
+
+    .question {
+        font-size: 1.1em; /* Smaller font size for questions */
+    }
+}
